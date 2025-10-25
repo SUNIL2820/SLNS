@@ -2,85 +2,117 @@ import React from 'react'
 
 const Contact = () => {
     return (
-        <section className="w-full bg-gray-50 py-16 px-6 md:px-20">
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
-                {/* Left Form */}
-                <div className="flex flex-col">
-                    <h2 className="text-3xl font-bold text-gray-800 mb-4">CONTACT US</h2>
-                    <p className="text-gray-600 mb-8">
-                        Get in touch with us for any enquiries and questions
-                    </p>
-                    <form className="flex flex-col gap-4">
-                        <input
-                            type="text"
-                            placeholder="Full Name"
-                            className="border-b-2 border-gray-300 focus:border-yellow-500 outline-none py-2"
-                        />
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            className="border-b-2 border-gray-300 focus:border-yellow-500 outline-none py-2"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Address"
-                            className="border-b-2 border-gray-300 focus:border-yellow-500 outline-none py-2"
-                        />
-                        <button
-                            type="submit"
-                            className="bg-yellow-500 text-white font-semibold py-2 px-6 mt-4 w-max hover:bg-yellow-600 transition-colors"
-                        >
-                            SUBMIT
-                        </button>
-                    </form>
-                </div>
+        <>
+            <section className="w-full bg-gray-50 py-16 px-6 md:px-12">
+                <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-equal">
+                    {/* Left Form */}
+                    <div className="flex flex-col">
+                        <h2 className="text-5xl md:text-6xl font-medium text-[#213C58] mb-4 font-bebas"
+                            style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                            CONTACT US
+                        </h2>
 
-                {/* Right Contact Info + Map */}
-                <div className="flex flex-col gap-6">
-                    {/* Contact Info */}
-                    <div className="flex flex-col md:flex-row md:justify-between gap-4">
-                        <div className="flex items-center gap-2 text-yellow-500">
-                            <span className="text-2xl">📞</span>
-                            <div>
-                                <p className="text-sm">CALL US</p>
-                                <p className="font-semibold text-gray-800">+91-9945434932</p>
+                        <p className="text-[#213C58] font-extralight mb-8" style={{ fontFamily: "'Sora', sans-serif" }}>
+                            Get in touch with us for any
+                            <span className="block">enquiries and questions</span>
+                        </p>
+                        <form
+                            className="flex flex-col gap-4"
+                            style={{ fontFamily: "'Sora', sans-serif" }}
+                            onSubmit={(e) => {
+                                e.preventDefault(); // prevent default reload
+                                const form = e.target;
+                                const name = form[0].value;
+                                const email = form[1].value;
+                                const address = form[2].value;
+
+                                const subject = encodeURIComponent("Contact Form Submission");
+                                const body = encodeURIComponent(
+                                    `Name: ${name}\nEmail: ${email}\nAddress: ${address}`
+                                );
+
+                                window.location.href = `mailto:sales@slnsconcrete.com?subject=${subject}&body=${body}`;
+                            }}
+                        >
+                            <input
+                                type="text"
+                                placeholder="Full Name"
+                                className="md:w-3/4 border-b md:border-b-2 border-[#FFB91E] focus:border-yellow-500 outline-none py-4" required
+                            />
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                className="md:w-3/4 border-b md:border-b-2 border-[#FFB91E] focus:border-yellow-500 outline-none py-4" required
+                            />
+                            <input
+                                type="text"
+                                placeholder="Address"
+                                className="md:w-3/4 border-b md:border-b-2 border-[#FFB91E] focus:border-yellow-500 outline-none py-4" required
+                            />
+                            <button
+                                type="submit"
+                                className="bg-[#FFB91E] text-xs text-black font-normal py-3 px-8 mt-4 w-max hover:bg-yellow-600 transition-colors mx-auto md:mx-0 block"
+                            >
+                                SUBMIT
+                            </button>
+                        </form>
+                    </div>
+
+                    {/* Right Contact Info + Map */}
+                    <div className="flex flex-col gap-6">
+                        {/* Contact Info */}
+                        <div className="flex flex-col md:flex-row md:justify-between gap-8 text-center" style={{ fontFamily: "'Sora', sans-serif" }}>
+                            {/* CALL US */}
+                            <div className="flex flex-col items-center">
+                                <img
+                                    src="/assets/callus.png"
+                                    alt="Call Us"
+                                    className="w-14 h-16 mb-3"
+                                />
+                                <p className="font-semibold text-gray-800 md:text-xs whitespace-nowrap">+91-9945434932</p>
                             </div>
-                        </div>
-                        <div className="flex items-center gap-2 text-yellow-500">
-                            <span className="text-2xl">📍</span>
-                            <div>
-                                <p className="text-sm">VISIT US</p>
-                                <p className="font-semibold text-gray-800 text-sm">
+
+                            {/* VISIT US */}
+                            <div className="flex flex-col items-center">
+                                <img
+                                    src="/assets/visitus.png"
+                                    alt="Visit Us"
+                                    className="w-14 h-16 mb-3"
+                                />
+                                <p className="font-semibold text-gray-800 md:text-xs max-w-xs">
                                     Survey Number 104/4, Byappanahalli Village, Jalahalli, Yelahanka Taluk, Bengaluru – 560064
                                 </p>
                             </div>
-                        </div>
-                        <div className="flex items-center gap-2 text-yellow-500">
-                            <span className="text-2xl">✉️</span>
-                            <div>
-                                <p className="text-sm">CONTACT US</p>
-                                <p className="font-semibold text-gray-800 text-sm">sales@slnsconcrete.com</p>
+
+                            {/* CONTACT US */}
+                            <div className="flex flex-col items-center">
+                                <img
+                                    src="/assets/contactus.png"
+                                    alt="Contact Us"
+                                    className="w-18 h-16 mb-3"
+                                />
+                                <p className="font-semibold text-gray-800 md:text-xs">sales@slnsconcrete.com</p>
                             </div>
                         </div>
-                    </div>
 
-                    {/* Google Map */}
-                    <div className="w-full h-64 md:h-80 rounded-xl overflow-hidden border-2 border-yellow-500">
-                        <iframe
-                            title="location"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086914747284!2d-79.38690858468117!3d43.64256727912119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d7b5a529b5%3A0x3c2d5e2d4f3b45cf!2sRogers%20Centre!5e0!3m2!1sen!2sca!4v1600000000000!5m2!1sen!2sca"
-                            width="100%"
-                            height="100%"
-                            style={{ border: 0 }}
-                            allowFullScreen=""
-                            loading="lazy"
-                            className="rounded-xl"
-                        ></iframe>
+                        {/* Google Map */}
+                        <div className="w-full h-64 md:h-80 rounded-xl overflow-hidden border-2 border-[#FFB91E] shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1713.6956963916732!2d77.58539381049509!3d13.098156510191947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae185851a10f83%3A0x7a7b0f25e96ecd57!2sBhoomi%20Digital%20Survey%20Tech!5e0!3m2!1sen!2sin!4v1761375063031!5m2!1sen!2sin"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    )
-}
+            </section>
+
+        </>
+    );
+};
 
 export default Contact

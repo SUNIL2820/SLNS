@@ -4,7 +4,7 @@ const GalleryPage = () => {
     // Gallery images array - using existing assets and adding placeholder paths
     const galleryImages = [
         '/assets/Frame 106.png',
-        '/assets/Frame 766.png', 
+        '/assets/Frame 766.png',
         '/assets/Frame 767.png',
         '/assets/Concrete Texture 2.png',
         '/assets/Concrete Texture 2 (1).png',
@@ -20,9 +20,9 @@ const GalleryPage = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setIsTransitioning(true)
-            
+
             setTimeout(() => {
-                setCurrentImageIndex((prevIndex) => 
+                setCurrentImageIndex((prevIndex) =>
                     prevIndex === galleryImages.length - 1 ? 0 : prevIndex + 1
                 )
                 setIsTransitioning(false)
@@ -61,13 +61,12 @@ const GalleryPage = () => {
                                 <img
                                     src={galleryImages[currentImageIndex]}
                                     alt={`Gallery Image ${currentImageIndex + 1}`}
-                                    className={`w-full h-full object-cover rounded-lg transition-opacity duration-600 ${
-                                        isTransitioning ? 'opacity-0' : 'opacity-100'
-                                    }`}
+                                    className={`w-full h-full object-cover rounded-lg transition-opacity duration-600 ${isTransitioning ? 'opacity-0' : 'opacity-100'
+                                        }`}
                                 />
-                                
+
                                 {/* Image overlay with subtle pattern */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/10 rounded-lg"></div>
+                                <div className="absolute inset-0 bg-linear-to-br from-transparent via-transparent to-black/10 rounded-lg"></div>
                             </div>
                         </div>
                     </div>
@@ -79,11 +78,10 @@ const GalleryPage = () => {
                                 <button
                                     key={index}
                                     onClick={() => handleThumbnailClick(index)}
-                                    className={`flex-shrink-0 w-24 h-16 md:w-32 md:h-20 rounded-lg overflow-hidden shadow-lg transition-all duration-300 ${
-                                        index === currentImageIndex 
-                                            ? 'ring-4 ring-[#F5B400] scale-105' 
+                                    className={`shrink-0 w-24 h-16 md:w-32 md:h-20 rounded-lg overflow-hidden shadow-lg transition-all duration-300 ${index === currentImageIndex
+                                            ? 'ring-4 ring-[#F5B400] scale-105'
                                             : 'hover:scale-105 hover:shadow-xl'
-                                    }`}
+                                        }`}
                                 >
                                     <img
                                         src={image}

@@ -4,12 +4,12 @@ const Services = () => {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <section className="relative h-screen bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url('/assets/Frame 106.png')"}}>
+            <section className="relative h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/assets/Frame 106.png')" }}>
                 <div className="absolute inset-0 bg-black bg-opacity-30"></div>
                 <div className="relative z-10 flex h-full">
                     {/* Left side - empty for image */}
                     <div className="w-1/2"></div>
-                    
+
                     {/* Right side - Content overlay */}
                     <div className="w-1/2 flex items-center justify-center p-8">
                         <div className="text-white max-w-lg">
@@ -17,15 +17,15 @@ const Services = () => {
                                 READY MIXED CONCRETE
                             </h1>
                             <div className="w-16 h-1 bg-[#F5B400] mb-6"></div>
-                            
+
                             <p className="text-lg mb-4 leading-relaxed">
                                 We specialize in manufacturing and supplying high-quality Ready-Mix Concrete (RMC) for all types of construction needs — from small residential projects to large-scale government and industrial works.
                             </p>
-                            
+
                             <p className="text-lg mb-8 leading-relaxed">
                                 Our mixes range from M7.5 to M60, including both nominal and design mixes, tailored to meet structural and durability requirements.
                             </p>
-                            
+
                             <button className="bg-[#F5B400] text-black px-8 py-3 font-semibold hover:bg-yellow-300 transition-colors">
                                 CONTACT US
                             </button>
@@ -105,7 +105,7 @@ const Services = () => {
                             Our 2-acre production facility in Byappanhalli Village, Yelahanka Taluk, Bengaluru houses advanced, high-volume equipment designed for precision and reliability. Every machine is maintained under strict SOPs to support 24/7 plant operations and the "Quick Service" delivery model.
                         </p>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {/* Core Infrastructure Card */}
                         <div className="bg-[#C2C2C2] text-black p-6 rounded-lg relative">
