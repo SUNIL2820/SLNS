@@ -6,7 +6,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="fixed top-0 left-0 md:px-6 w-full z-50 bg-linear-to-l from-black/90 via-black/20 to-transparent text-white">
+        <nav className="top-0 left-0 md:px-6 w-full z-50 bg-linear-to-l from-black/90 via-black/20 to-transparent text-white">
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
                 {/* Logo */}
                 <div className="cursor-pointer -mt-6">
