@@ -1,6 +1,6 @@
 import React from "react";
 
-const FeatureSection = ({ bgImage, overlayColor = "bg-black/60", icon, title, points = [] }) => {
+const FeatureSection = ({ overlayColor = "bg-black/60", icon, title, points = [] }) => {
     return (
         <div
             className="relative w-full bg-cover bg-center text-white py-16 px-6 flex flex-col justify-center items-center rounded-2xl overflow-hidden"
