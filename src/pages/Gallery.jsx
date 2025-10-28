@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Gallery = () => {
     // Gallery images array - using available images from assets
     const galleryImages = [
-        '/assets/Frame 106.png',
+        
         '/assets/Frame 766.png',
         '/assets/Frame 767.png',
         '/assets/Property 1=Default.png',
@@ -14,6 +14,15 @@ const Gallery = () => {
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
+    // Auto-slide images on an interval without transitions
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1))
+        }, 2000)
+
+        return () => clearInterval(intervalId)
+    }, [galleryImages.length])
+
     // Handle thumbnail click
     const handleThumbnailClick = (index) => {
         if (index !== currentImageIndex) {
@@ -23,13 +32,13 @@ const Gallery = () => {
 
     return (
         <div
-            className="min-h-screen bg-cover bg-center bg-no-repeat relative"
+            className="min-h-screen bg-cover bg-center bg-no-repeat relative filter contrast-125"
             style={{
-                backgroundImage: "url('SLNS\public\assets\construction site silhouettes Background 2.png')",
+                backgroundImage: "url('/assets/construction site silhouettes Background.png')",
             }}
         >
             {/* Soft white overlay for blending effect */}
-            <div className="absolute inset-0 bg-white/85 backdrop-blur-[2px]"></div>
+            <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px]"></div>
 
             {/* Main Content */}
             <main className="relative py-16 px-12" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
@@ -41,21 +50,14 @@ const Gallery = () => {
                         </h1>
                     </div>
 
-                    {/* Main Image Display */}
-                    <div className="mb-10 relative z-10">
-                        <div className="relative overflow-hidden rounded-lg shadow-2xl max-w-6xl mx-auto">
-                            <div className="relative h-[550px] overflow-hidden">
-                                {/* Current Image */}
-                                <div className="absolute inset-0">
-                                    <img
-                                        src={galleryImages[currentImageIndex]}
-                                        alt={`Gallery Image ${currentImageIndex + 1}`}
-                                        className="w-full h-full object-contain object-center"
-                                    />
-                                    {/* Sharp gradient overlay at bottom */}
-                                    <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black/40"></div>
-                                </div>
-                            </div>
+                    {/* Main Gallery Image - plain image, no card wrapper */}
+                    <div className="mb-8">
+                        <div className="relative h-[60vh] md:h-[70vh] lg:h-[80vh]">
+                            <img
+                                src={galleryImages[currentImageIndex]}
+                                alt={`Gallery Image ${currentImageIndex + 1}`}
+                                className="w-full h-full object-contain"
+                            />
                         </div>
                     </div>
 
@@ -66,9 +68,9 @@ const Gallery = () => {
                                 <button
                                     key={index}
                                     onClick={() => handleThumbnailClick(index)}
-                                    className={`shrink-0 w-40 h-22 rounded-lg overflow-hidden shadow-lg ${index === currentImageIndex
-                                        ? 'ring-4 ring-[#F5B400] scale-105 shadow-2xl border-2 border-[#F5B400]'
-                                        : 'ring-2 ring-[#F5B400]/50 border border-[#F5B400]/30'
+                                    className={`shrink-0 w-24 h-16 md:w-32 md:h-20 rounded-lg overflow-hidden shadow-lg ${index === currentImageIndex
+                                        ? 'ring-4 ring-[#F5B400]'
+                                        : ''
                                         }`}
                                 >
                                     <img
@@ -81,12 +83,7 @@ const Gallery = () => {
                         </div>
                     </div>
 
-                    {/* Image Counter */}
-                    <div className="text-center relative z-10">
-                        <p className="text-gray-600 text-base">
-                            {currentImageIndex + 1} of {galleryImages.length}
-                        </p>
-                    </div>
+                    {/* Image counter removed */}
                 </div>
             </main>
         </div>
