@@ -6,15 +6,15 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="top-0 left-0 z-50 w-full bg-[#213C58] text-white fixed">
-            <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <nav className="top-0 left-0 z-50 w-full bg-[#213C58] text-white md:px-6">
+            <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo Image */}
-                <div className="cursor-pointer">
-                    <img src={logo} alt="Logo" className="h-10 md:h-12 object-contain" />
+                <div className="cursor-pointer relative">
+                    <img src={logo} alt="Logo" className="h-20 md:h-26 object-contain z-9999" />
                 </div>
 
                 {/* Desktop Links */}
-                <div className="hidden md:flex space-x-8 text-lg">
+                <div className="hidden md:flex space-x-12 text-lg ">
                     <a href="/" className="hover:text-gray-300 transition">Home</a>
                     <a href="/services" className="hover:text-gray-300 transition">Services</a>
                     <a href="/about" className="hover:text-gray-300 transition">About Us</a>

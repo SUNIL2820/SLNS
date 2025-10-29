@@ -42,10 +42,9 @@ const Services = () => {
 
   return (
     <div className="bg-white font-sans text-gray-800 scroll-smooth">
-      <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative flex flex-col lg:flex-row min-h-[90vh]">
+      <section className="relative flex flex-col lg:flex-row min-h-[90vh] mt-4">
         {/* LEFT IMAGE WITH OVERLAYS */}
         <div className="relative w-full lg:w-[60%]">
           <img
