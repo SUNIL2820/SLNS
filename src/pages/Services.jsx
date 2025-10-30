@@ -85,13 +85,13 @@ const Services = () => {
 
       {/* Row of three cards */}
       <div className="w-full px-6 mt-16 md:-mt-[212px]" data-aos="fade-up">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center md:justify-items-stretch">
           {/* Quality */}
-          <div className="relative text-white p-6 shadow-xl rounded-x0 overflow-hidden w-[354px] h-[367px] mx-auto transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#F9B233] hover:ring-offset-2" data-aos="zoom-in">
+          <div className="relative bg-white text-white p-6 shadow-xl overflow-hidden w-[354px] h-[367px] mx-auto transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#F9B233] hover:ring-offset-2" data-aos="zoom-in">
             <img
               src="/assets/card bg.png"
               alt=""
-              className="absolute inset-0 w-full h-full object-cover opacity-70 filter contrast-150"
+              className="absolute inset-0 w-full h-full object-cover opacity-100"
             />
             <div className="relative z-10">
               <div className="flex items-center mb-5">
@@ -110,11 +110,11 @@ const Services = () => {
           </div>
 
           {/* On-Site */}
-          <div className="relative text-white p-6 shadow-xl rounded-x0 overflow-hidden w-[354px] h-[367px] mx-auto transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#F9B233] hover:ring-offset-2" data-aos="zoom-in">
+          <div className="relative bg-white text-white p-6 shadow-xl overflow-hidden w-[354px] h-[367px] mx-auto transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#F9B233] hover:ring-offset-2" data-aos="zoom-in">
             <img
               src="/assets/card bg.png"
               alt=""
-              className="absolute inset-0 w-full h-full object-cover opacity-70 filter contrast-150"
+              className="absolute inset-0 w-full h-full object-cover opacity-100"
             />
             <div className="relative z-10">
               <div className="flex items-center mb-5">
@@ -133,11 +133,11 @@ const Services = () => {
           </div>
 
           {/* Logistic */}
-          <div className="relative text-white p-6 shadow-xl rounded-x0 overflow-hidden w-[354px] h-[367px] mx-auto transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#F9B233] hover:ring-offset-2" data-aos="zoom-in">
+          <div className="relative bg-white text-white p-6 shadow-xl overflow-hidden w-[354px] h-[367px] mx-auto transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#F9B233] hover:ring-offset-2" data-aos="zoom-in">
             <img
               src="/assets/card bg.png"
               alt=""
-              className="absolute inset-0 w-full h-full object-cover opacity-70 filter contrast-150"
+              className="absolute inset-0 w-full h-full object-cover opacity-100"
             />
             <div className="relative z-10">
               <div className="flex items-center mb-5">
