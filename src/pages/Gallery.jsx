@@ -44,14 +44,14 @@ const Gallery = () => {
             <main className="relative py-16 px-12" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                 <div className="max-w-7xl mx-auto">
                     {/* Gallery Heading */}
-                    <div className="text-center mb-12 relative z-10">
+                    <div className="text-center mb-4 md:mb-8 relative z-10">
                         <h1 className="text-7xl font-bold tracking-widest uppercase text-[#F5B400] drop-shadow-lg">
                             GALLERY
                         </h1>
                     </div>
 
                     {/* Main Gallery Image - plain image, no card wrapper */}
-                    <div className="mb-8">
+                    <div className="mb-[-8px] md:mb-0">
                         <div className="relative h-[60vh] md:h-[70vh] lg:h-[80vh]">
                             <img
                                 src={galleryImages[currentImageIndex]}
@@ -62,8 +62,8 @@ const Gallery = () => {
                     </div>
 
                     {/* Thumbnail Navigation */}
-                    <div className="mb-12 relative z-10">
-                        <div className="flex space-x-5 overflow-x-auto pb-4 justify-center scrollbar-hide">
+                    <div className="mb-0 mt-0 relative z-10">
+                        <div className="flex space-x-0 overflow-x-auto p-0 m-0 mt-0 mb-0 justify-center items-start scrollbar-hide">
                             {galleryImages.map((image, index) => (
                                 <button
                                     key={index}
