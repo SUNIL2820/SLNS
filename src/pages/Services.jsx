@@ -76,7 +76,7 @@ const Services = () => {
             government and industrial works. Our mixes range from M7.5 to M60.
           </p>
           <Link to="/contact" className="inline-block">
-            <button className="bg-[#F9B233] text-black px-8 py-3 font-semibold shadow-lg w-fit transition-colors duration-300 ease-out hover:bg-yellow-400 hover:shadow-xl">
+            <button className="bg-[#FFB91E] text-black px-8 py-3 font-semibold shadow-lg w-fit transition-all duration-300 ease-out hover:shadow-yellow-400/70 hover:shadow-2xl">
               CONTACT US
             </button>
           </Link>
@@ -85,9 +85,9 @@ const Services = () => {
 
       {/* Row of three cards */}
       <div className="w-full px-6 mt-16 md:-mt-[212px]" data-aos="fade-up">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center md:justify-items-stretch">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
           {/* Quality */}
-          <div className="relative bg-white text-white p-6 shadow-xl overflow-hidden w-[354px] h-[367px] mx-auto transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#F9B233] hover:ring-offset-2" data-aos="zoom-in">
+          <div className="relative bg-white text-white p-6 shadow-xl overflow-hidden w-[354px] h-[367px] transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#F9B233] hover:ring-offset-2" data-aos="zoom-in">
             <img
               src="/assets/card bg.png"
               alt=""
@@ -110,7 +110,7 @@ const Services = () => {
           </div>
 
           {/* On-Site */}
-          <div className="relative bg-white text-white p-6 shadow-xl overflow-hidden w-[354px] h-[367px] mx-auto transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#F9B233] hover:ring-offset-2" data-aos="zoom-in">
+          <div className="relative bg-white text-white p-6 shadow-xl overflow-hidden w-[354px] h-[367px] transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#F9B233] hover:ring-offset-2" data-aos="zoom-in">
             <img
               src="/assets/card bg.png"
               alt=""
@@ -133,7 +133,7 @@ const Services = () => {
           </div>
 
           {/* Logistic */}
-          <div className="relative bg-white text-white p-6 shadow-xl overflow-hidden w-[354px] h-[367px] mx-auto transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#F9B233] hover:ring-offset-2" data-aos="zoom-in">
+          <div className="relative bg-white text-white p-6 shadow-xl overflow-hidden w-[354px] h-[367px] transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#F9B233] hover:ring-offset-2" data-aos="zoom-in">
             <img
               src="/assets/card bg.png"
               alt=""
