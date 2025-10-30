@@ -3,7 +3,7 @@ import React from 'react'
 const Contact = () => {
     return (
         <>
-            <section className="w-full bg-gray-50 mb-10 px-6 md:px-12">
+            <section className="w-full  mb-10 px-6 md:py-12 md:px-12">
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-equal">
                     {/* Left Form */}
                     <div className="flex flex-col">
@@ -59,7 +59,7 @@ const Contact = () => {
                     </div>
 
                     {/* Right Contact Info + Map */}
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-6" >
                         {/* Contact Info */}
                         <div className="flex flex-col md:flex-row md:justify-between gap-8 text-center" style={{ fontFamily: "'Sora', sans-serif" }}>
                             {/* CALL US */}

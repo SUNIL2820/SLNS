@@ -76,7 +76,6 @@ const Home = () => {
             duration: 1000, // Animation duration in ms
             easing: "ease-in-out", // Easing function
             once: false, // Whether animation should happen only once
-            mirror: false, // Whether elements should animate out while scrolling past them
         });
     }, []);
 
@@ -99,16 +98,38 @@ const Home = () => {
     };
 
     const customers = [
-        "/assets/customer 1.png",
-        "/assets/customer 2.png",
-        "/assets/customer 3.png",
-        "/assets/customer 4.png",
-        "/assets/customer 5.png",
+        "/assets/customer/3b78a1_9cdd224ba9494e03b6a585e9eb2dbe40~mv2.jpg",
+        "/assets/customer/9eadea566976652792e2a199c039880a.png",
+        "/assets/customer/72c194f3e3dbb31ca73b4dc1d3362a26.jpg",
+        "/assets/customer/1631328697966.jpg",
+        "/assets/customer/Axis_Capstone_Construction_Pvt._Ltd..jpg",
+        "/assets/customer/Badge_of_the_Indian_Air_Force.png",
+        "/assets/customer/Bangalore Nirmithi Kendra(Urban).png",
+        "/assets/customer/bharat-electronics-limited-logo-hd.webp",
+        "/assets/customer/Bruhat_Bengaluru_Mahanagara_Palike_logo.jpg",
+        "/assets/customer/concept-city-developers-bangalore-pf6r2.avif",
+        "/assets/customer/g39hbw4v.jpg",
+        "/assets/customer/godrej-properties-logo-png_seeklogo-495528.png",
+        "/assets/customer/govianu_wealth_management_private_limited_logo.jpg",
+        "/assets/customer/images (1).png",
+        "/assets/customer/images copy.png",
+        "/assets/customer/images.png",
+        "/assets/customer/jdc6ynbjse9i9znxdo9s.avif",
+        "/assets/customer/L970266-20150701153113.jpg",
+        "/assets/customer/Legacy-NCC-1.jpg",
+        "/assets/customer/Logo_home.png",
+        "/assets/customer/logo-1.png",
+        "/assets/customer/logo.webp",
+        "/assets/customer/mfar-constructions.png",
+        "/assets/customer/newlogo.png",
+        "/assets/customer/official_rhd_logo.jpg",
+        "/assets/customer/Pristine-Homes-Quotation.docx-1-2.png",
+        "/assets/customer/uniquebuildssconstruction_logo.jpg",
 
     ];
     return (
         <>
-            <section className="relative w-full h-screen flex items-center justify-start overflow-hidden -top-46 -z-10">
+            <section className="relative w-full h-screen flex items-center justify-start overflow-hidden -top-20 md:-top-46 -z-10">
                 {/* Background Slider */}
                 <div className="absolute top-0 left-0 w-full h-full">
                     <Slider {...settings}>
@@ -130,7 +151,7 @@ const Home = () => {
                 {/* Text Content */}
                 <div className="relative z-10 max-w-xl px-6 md:px-16 text-left text-white mt-16 md:mt-0" data-aos="fade-right">
                     <h1
-                        className="text-3xl md:text-4xl whitespace-nowrap"
+                        className="text-3xl md:text-4xl md:whitespace-nowrap"
                         style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                     >
                         High-volume concrete supply and civil project
@@ -141,7 +162,7 @@ const Home = () => {
                     >
                         delivery across Bengaluru
                     </h1>
-                    <p className="text-lg md:text-base mb-6 whitespace-nowrap">
+                    <p className="text-lg md:text-base mb-6 md:whitespace-nowrap">
                         — M7.5 to M60, 24/7 plant capability, trusted by BEL, Indian Airforce & BBMP.
                     </p>
                     <button className="bg-[#FFB91E] hover:bg-yellow-600 text-black font-semibold px-6 py-3 mt-6 rounded-lg transition-all">
@@ -149,9 +170,12 @@ const Home = () => {
                     </button>
                 </div>
             </section>
-            <section className="w-full flex flex-col md:flex-row items-center justify-between overflow-hidden -mt-20">
-                {/* Left Side - Image */}
-                <div className="w-full md:w-1/2 flex justify-start items-center" data-aos="fade-right">
+            <section className="w-full flex flex-col md:flex-row items-center justify-between overflow-hidden md:-mt-40">
+                {/* Left Side - Image (visible only on desktop) */}
+                <div
+                    className="hidden md:flex w-full md:w-1/2 justify-start items-center"
+                    data-aos="fade-right"
+                >
                     <img
                         src="/assets/Work 1.png"
                         alt="Work Illustration"
@@ -160,35 +184,53 @@ const Home = () => {
                 </div>
 
                 {/* Right Side - Text Content */}
-                <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-8 text-[#213C58]" data-aos="fade-left">
+                <div
+                    className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-8 text-[#213C58]"
+                    data-aos="fade-left"
+                >
                     <h2
-                        className="text-3xl md:text-5xl font-bold mb-6"
+                        className="text-3xl md:text-5xl font-bold mb-4 text-center md:text-left"
                         style={{ fontFamily: "'Bebas Neue', sans-serif", fontWeight: 400 }}
                     >
                         WELCOME TO our company
                     </h2>
 
+                    {/* Image shown only on mobile below heading */}
+                    <div className="flex justify-center mb-4 md:hidden">
+                        <img
+                            src="/assets/Work 1.png"
+                            alt="Work Illustration"
+                            className="w-3/4 h-auto object-cover"
+                        />
+                    </div>
+
                     <p
-                        className="text-base md:text-lg mb-6 leading-relaxed"
+                        className="text-base md:text-lg mb-6 leading-relaxed text-center md:text-left"
                         style={{ fontFamily: "'Sora', sans-serif" }}
                     >
-                        At Sri Lakshmi Narasimha Swamy Concrete (SLNS), we deliver high-quality Ready-Mix Concrete (M7.5–M60) with precision, strength, and reliability.
-                        <br />Founded in 2022, we’ve become one of Bengaluru’s trusted concrete suppliers, serving leading clients like BEL, BBMP, and the Indian Airforce.
-                        <br />With a 75 m³/hour batching plant and 24/7 operations, we ensure on-time delivery and superior quality for every project.
+                        At Sri Lakshmi Narasimha Swamy Concrete (SLNS), we deliver high-quality Ready-Mix Concrete (M7.5–M60)
+                        with precision, strength, and reliability.
+                        <br />Founded in 2022, we’ve become one of Bengaluru’s trusted concrete suppliers, serving leading
+                        clients like BEL, BBMP, and the Indian Airforce.
+                        <br />With a 75 m³/hour batching plant and 24/7 operations, we ensure on-time delivery and superior
+                        quality for every project.
                     </p>
 
-                    <button className="bg-[#FFB91E] hover:bg-yellow-600 text-[#16283B] font-semibold px-6 py-3 rounded-lg transition-all w-fit"
-                        style={{ fontFamily: "'sora', sans-serif" }}>
+                    <button
+                        className="bg-[#FFB91E] hover:bg-yellow-600 text-[#16283B] font-semibold px-6 py-3 rounded-lg transition-all w-fit mx-auto md:mx-0"
+                        style={{ fontFamily: "'Sora', sans-serif" }}
+                    >
                         Know More
                     </button>
                 </div>
             </section>
-            <section className="relative w-full flex items-center justify-center overflow-hidden">
+
+            <section className="relative w-full flex items-center justify-center overflow-hidden my-10 md:my-0">
                 {/* Background Image */}
                 <img
                     src="/assets/Concrete Texture 1.png"
                     alt="Team Work"
-                    className="w-full h-auto object-cover"
+                    className="absolute inset-0 w-full h-full object-cover"
                 />
 
                 {/* Overlay */}
@@ -197,39 +239,27 @@ const Home = () => {
                 {/* Stats Content */}
                 <div
                     ref={sectionRef}
-                    className="absolute inset-0 flex flex-col items-center justify-center text-white px-4"
+                    className="relative flex flex-col items-center justify-center text-white px-4 py-16 min-h-screen md:min-h-[60vh]"
                 >
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
                         <div>
-                            <h2 className="text-5xl md:text-4xl text-[#FFB91E] font-bold mb-2">
-                                {counts.members}+
+                            <h2 className="text-5xl text-[#FFB91E] font-bold mb-2">
+                                {counts.customers}+
                             </h2>
                             <p
-                                className="text-lg md:text-xl"
+                                className="text-lg"
                                 style={{ fontFamily: "'Bebas Neue', sans-serif", fontWeight: 400 }}
                             >
-                                Members
+                                Customers
                             </p>
                         </div>
 
                         <div>
-                            <h2 className="text-5xl md:text-4xl text-[#FFB91E] font-bold mb-2">
-                                {counts.vehicles}+
-                            </h2>
-                            <p
-                                className="text-lg md:text-xl"
-                                style={{ fontFamily: "'Bebas Neue', sans-serif", fontWeight: 400 }}
-                            >
-                                Vehicles
-                            </p>
-                        </div>
-
-                        <div>
-                            <h2 className="text-5xl md:text-4xl text-[#FFB91E] font-bold mb-2">
+                            <h2 className="text-5xl text-[#FFB91E] font-bold mb-2">
                                 {counts.projects}+
                             </h2>
                             <p
-                                className="text-lg md:text-xl"
+                                className="text-lg"
                                 style={{ fontFamily: "'Bebas Neue', sans-serif", fontWeight: 400 }}
                             >
                                 Projects
@@ -237,20 +267,33 @@ const Home = () => {
                         </div>
 
                         <div>
-                            <h2 className="text-5xl md:text-4xl text-[#FFB91E] font-bold mb-2">
-                                {counts.customers}+
+                            <h2 className="text-5xl text-[#FFB91E] font-bold mb-2">
+                                {counts.vehicles}+
                             </h2>
                             <p
-                                className="text-lg md:text-xl"
+                                className="text-lg"
                                 style={{ fontFamily: "'Bebas Neue', sans-serif", fontWeight: 400 }}
                             >
-                                Customers
+                                Vehicles
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 className="text-5xl text-[#FFB91E] font-bold mb-2">
+                                {counts.members}+
+                            </h2>
+                            <p
+                                className="text-lg"
+                                style={{ fontFamily: "'Bebas Neue', sans-serif", fontWeight: 400 }}
+                            >
+                                Members
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className="w-full py-16 bg-white">
+
+            <section className="w-full pb-5 md:py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-6">
                     {/* Heading */}
                     <h2
@@ -282,7 +325,7 @@ const Home = () => {
       .marquee {
         display: flex;
         width: max-content;
-        animation: marquee 20s linear infinite;
+        animation: marquee 50s linear infinite;
       }
 
       @keyframes marquee {

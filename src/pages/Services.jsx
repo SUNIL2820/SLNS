@@ -65,8 +65,8 @@ const Services = () => {
         {/* RIGHT: Ready Mixed Concrete Text */}
         <div className="w-full lg:w-1/2 bg-white relative min-h-[80vh] py-2 px-8 lg:px-16" data-aos="fade-up">
           <h1
-            className="text-4xl lg:text-5xl font-bold text-black mb-4 leading-tight"
-            style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+            className="text-2xl lg:text-3xl font-bold text-black mb-4 leading-tight"
+            style={{ fontFamily: "'sora', sans-serif" }}
           >
             <span className="underline decoration-[#F9B233] underline-offset-4">READY MIXED</span> CONCRETE
           </h1>
@@ -98,7 +98,7 @@ const Services = () => {
                 <div className="w-12 h-12 flex items-center justify-center mr-4">
                   <img src="/assets/Quality.png" alt="" className="w-8 h-8" />
                 </div>
-                <h3 className="text-3xl font-bold uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>QUALITY</h3>
+                <h3 className="text-3xl font-bold uppercase" style={{ fontFamily: "'sora', sans-serif" }}>QUALITY</h3>
               </div>
               <ul className="space-y-2 text-base leading-relaxed text-white/80" style={{ fontFamily: "'AG MB3 Body', sans-serif", fontWeight: 500 }}>
                 <li>• Cube casting, curing, and 7-day/28-day strength testing</li>
@@ -163,8 +163,8 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-left mb-12">
             <h2
-              className="text-4xl font-bold text-gray-900 mb-4"
-              style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+              className="text-4xl font-semibold text-gray-900 mb-4"
+              style={{ fontFamily: "'sora', sans-serif" }}
             >
               <span className="underline decoration-[#F9B233] underline-offset-4">Machine Capa</span>bility
             </h2>
