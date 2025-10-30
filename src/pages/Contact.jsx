@@ -1,13 +1,22 @@
 import React from 'react'
+import { useEffect } from 'react';
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 const Contact = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: false,
+        });
+    }, []);
     return (
         <>
             <section className="w-full  mb-10 px-6 md:py-12 md:px-12">
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-equal">
                     {/* Left Form */}
-                    <div className="flex flex-col">
-                        <h2 className="text-5xl md:text-6xl font-medium text-[#213C58] mb-4 font-bebas"
+                    <div className="flex flex-col" data-aos="fade-right">
+                        <h2 className="text-5xl md:text-6xl py-5 font-medium text-[#213C58] mb-4 font-bebas"
                             style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                             CONTACT US
                         </h2>
@@ -59,7 +68,7 @@ const Contact = () => {
                     </div>
 
                     {/* Right Contact Info + Map */}
-                    <div className="flex flex-col gap-6" >
+                    <div className="flex flex-col gap-6" data-aos="fade-left">
                         {/* Contact Info */}
                         <div className="flex flex-col md:flex-row md:justify-between gap-8 text-center" style={{ fontFamily: "'Sora', sans-serif" }}>
                             {/* CALL US */}
